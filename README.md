@@ -1,38 +1,35 @@
-Created by:
+# Advanced Simulation Assignments
 
-|Group Number|12|
-|:---:|:-------:|
-|Bettin Lorenzo| 6132928|
-|Dell'Orto Alessandro| 6129161|
-|Le Grand Tangui| 6172075|
-|Precup Ada | 5240719 |
-|van Engelen Ralph| 4964748|
+This repository contains the material for three assignments in the course **Advanced Simulation** of the MSc programme *Engineering and Policy Analysis* at TU Delft.
 
-# Project Title: Network Analysis 
-## Introduction
+## Authors
+- Alessandro Dell-Orto
+- other author
+- other author
+- other author
+- other author
 
-The current directory contains the code for the network analysis of the road network of Bangladesh. The aim of this project is to improve the quality of data obtained about the road network of Bangladesh. Ultimately the details about the road network are to be used to model the transport system of Bangladesh and conclude which arteries or bridges require immediate investments to secure stability in the country. 
-The directory contains the following sub-folers:
-- `analysis`: contains the final metrics and results of the network analysis
-- `data`: contains the raw data and the preprocessed data of the analysis
-- `Images`: contains the images used in support of the analysis
-- `model`: contains the code necessary to process the raw data and to perform the network analysis
-- `Report`: contains the final report of the analysis
-- `requirements.txt`: contains all the necessary packages to run the code and can be installed using the command `pip install -r requirements.txt`
+## Repository Structure
+- `model` – Python scripts for data processing and calculation of network metrics.
+- `analysis` – CSV files with ranked criticality and vulnerability scores.
+- `Images` – Plots created by the scripts.
+- `Report` – Final report of the third assignment.
+- `requirements.txt` – Python dependencies.
 
-## How to Use
+The `data` directory referenced in the scripts is omitted because the source datasets are large.
 
-Make sure you start of by installing the dependencies, after which you can run the code. The code is divided into two main parts: 
-- Road Network Preprocessing: it includes files `bridge_condition_refactored.py`,`data_pull.py`, `data_clean.py`, `road_condition_pull.py`, `road_condition_categories.py`,  `vulnerability_data.py`, `Vulnerability_data_earthquake.py`, `Vulnerability_data_rivererosion`. These files should be ran in this order to ensure the correct preprocessing of the data. 
-- Road Network Analysis: it includes files `Criticality_score.py` , `Vulnerability_score.py`. These are the files that should be ran to obtain the final metrics and results of the network analysis.
+## Methods Overview
+The analysis focuses on the road network of Bangladesh. The workflow is divided over the three assignments:
+1. **Data collection and cleaning** – Scripts such as `data_pull.py`, `data_clean.py` and `bridge_condition_refactored.py` parse the RMMS `.htm` files, clean traffic and road condition tables, and create processed CSV datasets.
+2. **Vulnerability and criticality computation** – `merging_vulnerability_roads.py` merges hazard scores for floods, river erosion and earthquakes with the processed road information. `Compute_metrics.py` calculates normalized criticality and vulnerability indicators for roads and bridges based on traffic, length and infrastructure condition.
+3. **Reporting** – The resulting rankings of the most critical and vulnerable links are saved to the `analysis` folder and summarised in the report under `Report/`.
 
-For further information on the code and the project, please refer to the final report in the `Report` folder as well as to particular README files in the subfolders. 
+## Usage
+Install the required packages with:
+```bash
+pip install -r requirements.txt
+```
+Then run the scripts in `model/` following the order described above to generate the processed datasets and metrics. Adjust the paths to the large RMMS data files locally before running the scripts.
 
-## Modifying Inputs
-
-You can update the kind of environmental risk you are interested in by changing the vulnerability data in the `data` folder. 
-You can also modify the type of metric you want to use to evaluate vulnerability and criticality by changing the code in the `model` folder. 
-You can also modify the categorization of road condition in the file `road_condition_categories.py` in the `model` folder. 
-
-## **Acknowledgments**
-This assignment is based on **EPA133a - Advanced Simulation** at TU Delft. We would like to thank the course instructors for the guidance and support throughout the project.
+## Notes on Data
+The raw and processed datasets are not included in this repository because of their size. Place the required RMMS files under a `data` directory when executing the scripts.
