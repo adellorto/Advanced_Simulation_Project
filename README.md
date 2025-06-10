@@ -1,6 +1,6 @@
 # Advanced Simulation Assignments
 
-This repository contains the material for three assignments in the course **Advanced Simulation** of the MSc programme *Engineering and Policy Analysis* at TU Delft.
+This project comprises Python code from three consecutive assignments completed in the course **Advanced Simulation** of the MSc programme *Engineering and Policy Analysis* at TU Delft. The model analyses Bangladesh's road network using Road Maintenance Management System (RMMS) data to compute vulnerability and criticality metrics.
 
 ## Authors
 - Alessandro Dell-Orto
@@ -16,20 +16,26 @@ This repository contains the material for three assignments in the course **Adva
 - `Report` – Final report of the third assignment.
 - `requirements.txt` – Python dependencies.
 
-The `data` directory referenced in the scripts is omitted because the source datasets are large.
+The `data` directory referenced in the scripts is not included because the datasets are large.
 
 ## Methods Overview
-The analysis focuses on the road network of Bangladesh. The workflow is divided over the three assignments:
-1. **Data collection and cleaning** – Scripts such as `data_pull.py`, `data_clean.py` and `bridge_condition_refactored.py` parse the RMMS `.htm` files, clean traffic and road condition tables, and create processed CSV datasets.
-2. **Vulnerability and criticality computation** – `merging_vulnerability_roads.py` merges hazard scores for floods, river erosion and earthquakes with the processed road information. `Compute_metrics.py` calculates normalized criticality and vulnerability indicators for roads and bridges based on traffic, length and infrastructure condition.
-3. **Reporting** – The resulting rankings of the most critical and vulnerable links are saved to the `analysis` folder and summarised in the report under `Report/`.
+The workflow is divided over the three assignments:
+1. **Data collection and cleaning** – Scripts such as `data_pull.py`, `data_clean.py` and `bridge_condition_refactored.py` parse the RMMS `.htm` files and generate processed CSV datasets.
+2. **Vulnerability and criticality computation** – `merging_vulnerability_roads.py` combines hazard scores with road attributes, and `Compute_metrics.py` calculates normalized indicators for roads and bridges.
+3. **Reporting** – Rankings of the most critical and vulnerable links are saved to the `analysis` folder and summarised in the report under `Report/`.
 
 ## Usage
 Install the required packages with:
 ```bash
 pip install -r requirements.txt
 ```
-Then run the scripts in `model/` following the order described above to generate the processed datasets and metrics. Adjust the paths to the large RMMS data files locally before running the scripts.
+Then run the scripts in `model/` following the order described above. Adjust the paths to the RMMS data files locally.
+
+## Modifying Inputs
+You can adjust hazard weights or road condition categories by editing the data and scripts inside `model/`.
 
 ## Notes on Data
-The raw and processed datasets are not included in this repository because of their size. Place the required RMMS files under a `data` directory when executing the scripts.
+The raw and processed datasets are not included in this repository because of their size.
+
+## Acknowledgments
+This project is based on the **EPA133a - Advanced Simulation** course at TU Delft.
