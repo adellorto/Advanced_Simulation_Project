@@ -1,6 +1,6 @@
 # Advanced Simulation Assignments
 
-This repository contains the material for three assignments in the course **Advanced Simulation** of the MSc programme *Engineering and Policy Analysis* at TU Delft.
+This repository contains Python code and results for analysing the road network of Bangladesh. The model derives vulnerability and criticality scores for roads and bridges from the Road Maintenance Management System (RMMS) data. It was developed over three sequential assignments in the course **Advanced Simulation** of the MSc programme *Engineering and Policy Analysis* at TU Delft.
 
 ## Authors
 - Alessandro Dell-Orto
