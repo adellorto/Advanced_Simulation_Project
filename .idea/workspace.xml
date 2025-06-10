@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="5d742a8a-74d7-43b7-ab29-b6814b2437d0" name="Changes" comment="Upload files" />
+    <list default="true" id="5d742a8a-74d7-43b7-ab29-b6814b2437d0" name="Changes" comment="Upload files">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -92,7 +97,7 @@
       <option name="presentableId" value="Default" />
       <updated>1749559374798</updated>
       <workItem from="1749559376101" duration="178000" />
-      <workItem from="1749559569867" duration="319000" />
+      <workItem from="1749559569867" duration="634000" />
     </task>
     <task id="LOCAL-00001" summary="Upload files">
       <option name="closed" value="true" />
@@ -102,7 +107,23 @@
       <option name="project" value="LOCAL" />
       <updated>1749559597538</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Upload files">
+      <option name="closed" value="true" />
+      <created>1749560120549</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1749560120549</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Upload files">
+      <option name="closed" value="true" />
+      <created>1749560141225</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1749560141225</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
